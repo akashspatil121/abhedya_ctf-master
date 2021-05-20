@@ -1,0 +1,1296 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+  width: 100%;
+}
+
+.category_fixed-heading {
+  text-align: left;
+}
+
+.navv {
+  z-index: 10;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.category {
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+.category_fixed-content-container {
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+.category_point-container {
+  animation: slideInLeft;
+  animation-duration: 1.5s;
+}
+.category_box {
+  animation: slideInRight;
+  animation-duration: 1.5s;
+}
+.mobtab-category {
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+.category_mobtab-content {
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.category {
+  background-color: #2c363f;
+  margin-left: 0px;
+  position: inherit;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+.category_mobtab {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.category_mobtab-container {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  width: 75vw;
+  position: absolute;
+  top: 75%;
+  left: 20%;
+  transform: translate(-20%, -75%);
+  padding: 5px;
+  border: 0px white solid;
+}
+.category_mobtab-heading {
+  font-size: 1.4em;
+  color: grey;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 40vw;
+  line-height: 1;
+}
+.category_mobtab-content {
+  font-size: 1em;
+  color: lightgray;
+  line-height: 1.1;
+}
+.category_mobtab-swipe img {
+  position: fixed;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -85%);
+  width: 130px;
+  animation-timing-function: linear;
+  animation: nisha 1s infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes nisha {
+  from {
+    left: 90vw;
+  }
+  to {
+    left: 95vw;
+  }
+}
+
+/* .category {
+    display: none;
+} */
+.category_fixed-bar {
+  display: none;
+}
+.fixed-menu {
+  display: block;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  height: 80px;
+  width: 80px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.fixed-menu:hover {
+  transform: scale(1.1);
+  transition: 1.5s;
+}
+
+#category_container {
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform: rotate(270deg) translateX(-100%);
+  transform-origin: top left;
+  position: fixed;
+  width: 100vh;
+  height: 100vw;
+}
+#category_container2 {
+  display: block;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+  white-space: nowrap;
+}
+
+.category_box-one {
+  display: block;
+  margin-left: 100vw;
+}
+
+#category_container .category_box {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  color: #000;
+  font-size: small;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  position: relative;
+  border: 0px black solid;
+  box-sizing: border-box;
+}
+.category_first {
+  background-color: rgb(15, 14, 14);
+}
+.category_second {
+  background-color: rgb(78, 78, 78);
+}
+.category_third {
+  background-color: black;
+}
+
+.categoryimage {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  opacity: 0.5;
+}
+.categoryimage:hover {
+  border: 1px grey solid;
+  transition: 1.5s;
+  cursor: pointer;
+}
+
+.category_point-container {
+  display: block;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 6vh;
+  right: 0px;
+  z-index: 1;
+  width: 80vw;
+  height: auto;
+  border-bottom: 3px white solid;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1.3em;
+}
+.category span a {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 1.5vw;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.category span a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+[name~="box1"] {
+  margin-left: -5px;
+}
+[name~="box2"] {
+  margin-left: -5px;
+}
+[name~="box3"] {
+  margin-left: -5px;
+}
+[name~="box4"] {
+  margin-left: -5px;
+}
+[name~="box5"] {
+  margin-left: -5px;
+}
+[name~="box6"] {
+  margin-left: -5px;
+}
+[name~="box7"] {
+  margin-left: -5px;
+}
+[name~="box8"] {
+  margin-left: -5px;
+}
+[name~="box9"] {
+  margin-left: -5px;
+}
+[name~="box10"] {
+  margin-left: -5px;
+}
+[name~="box11"] {
+  margin-left: -5px;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 480px) {
+  .category_mobtab-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 70vw;
+    position: absolute;
+    top: 57%;
+    left: 20%;
+    transform: translate(-20%, -57%);
+    padding: 5px;
+    border: 0px white solid;
+  }
+  .category_mobtab-heading {
+    font-size: 1.8em;
+    color: grey;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 40vw;
+    line-height: 1;
+  }
+  .category_mobtab-content {
+    font-size: 1.6em;
+    color: lightgray;
+    line-height: 1.1;
+  }
+  .category_mobtab-swipe img {
+    position: fixed;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -90%);
+    width: 200px;
+    animation-timing-function: linear;
+    animation: nisha 1s infinite;
+    animation-iteration-count: infinite;
+  }
+  @keyframes nisha {
+    from {
+      left: 85vw;
+    }
+    to {
+      left: 90vw;
+    }
+  }
+
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 120px;
+    width: 120px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .category_box-one {
+    display: block;
+    margin-left: 90vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 90vw;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px black solid;
+    box-sizing: border-box;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 0.5;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    right: 0px;
+    z-index: 1;
+    width: 70vw;
+    height: auto;
+    border-bottom: 2px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.4em;
+  }
+  .category span a {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 1.5vw;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .category span a:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* surface duo Layout: 540px to a max of 720px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 540px) and (min-device-height: 720px) {
+  .category_mobtab-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 65vw;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transform: translate(-20%, -65%);
+    padding: 5px;
+    border: 0px white solid;
+  }
+  .category_mobtab-heading {
+    font-size: 1.6em;
+    color: grey;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 40vw;
+    line-height: 1;
+  }
+  .category_mobtab-content {
+    font-size: 1.1em;
+    color: lightgray;
+    line-height: 1.1;
+  }
+  .category_mobtab-swipe img {
+    position: fixed;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -90%);
+    width: 150px;
+    animation-timing-function: linear;
+    animation: nisha 1s infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .category_box-one {
+    display: block;
+    margin-left: 90vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 90vw;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px black solid;
+    box-sizing: border-box;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 0.5;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    right: 0px;
+    z-index: 1;
+    width: 70vw;
+    height: auto;
+    border-bottom: 2px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2em;
+  }
+}
+
+/* microsoft lumia 550 Layout: 640px to a max of 360px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 640px) and (min-device-height: 360px) {
+  .category_mobtab-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 65vw;
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    transform: translate(-20%, -65%);
+    padding: 5px;
+    border: 0px white solid;
+  }
+  .category_mobtab-heading {
+    font-size: 1.3em;
+    color: grey;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 40vw;
+    line-height: 1;
+  }
+  .category_mobtab-content {
+    font-size: 0.9em;
+    color: lightgray;
+    line-height: 1.1;
+  }
+  .category_mobtab-swipe img {
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    transform: translate(-80%, -90%);
+    width: 130px;
+    animation-timing-function: linear;
+    animation: nisha 1s infinite;
+    animation-iteration-count: infinite;
+  }
+  @keyframes nisha {
+    from {
+      left: 90vw;
+    }
+    to {
+      left: 95vw;
+    }
+  }
+
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    height: 70px;
+    width: 70px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .category_box-one {
+    display: block;
+    margin-left: 90vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 60vw;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px black solid;
+    box-sizing: border-box;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    opacity: 0.5;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    right: 0px;
+    z-index: 1;
+    width: 70vw;
+    height: auto;
+    border-bottom: 2px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.2em;
+  }
+  .category span a {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 1.5vw;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .category span a:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* ipad and ipad mini Layout: 768px to a max of 1024px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) {
+  .category_mobtab-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 70vw;
+    position: absolute;
+    top: 57%;
+    left: 20%;
+    transform: translate(-20%, -57%);
+    padding: 5px;
+    border: 0px white solid;
+  }
+  .category_mobtab-heading {
+    font-size: 1.8em;
+    color: grey;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 40vw;
+    line-height: 1;
+  }
+  .category_mobtab-content {
+    font-size: 1.6em;
+    color: lightgray;
+    line-height: 1.1;
+  }
+  .category_mobtab-swipe img {
+    position: fixed;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -90%);
+    width: 200px;
+    animation-timing-function: linear;
+    animation: nisha 1s infinite;
+    animation-iteration-count: infinite;
+  }
+  @keyframes nisha {
+    from {
+      left: 85vw;
+    }
+    to {
+      left: 90vw;
+    }
+  }
+
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 120px;
+    width: 120px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .category_box-one {
+    display: block;
+    margin-left: 90vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 90vw;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px black solid;
+    box-sizing: border-box;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    opacity: 0.5;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    right: 0px;
+    z-index: 1;
+    width: 70vw;
+    height: auto;
+    border-bottom: 2px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.4em;
+  }
+  .category span a {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 1.5vw;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .category span a:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+  .category {
+    background-color: #2c363f;
+    margin-left: 0px;
+  }
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 1px;
+    height: 1px;
+  }
+
+  .category_mobtab {
+    display: none;
+  }
+  .category_fixed-bar {
+    display: block;
+    width: 45vw;
+    height: 100vh;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+  .category_fixed-content-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 85%;
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    transform: translate(-0%, -60%);
+    border: 0px red solid;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+  .category_fixed-heading {
+    font-size: 3.2em;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    padding-bottom: 20px;
+  }
+  .category_fixed-content {
+    font-size: 0.8em;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    height: 90px;
+    width: 90px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .category_fixed-subheading {
+    font-size: 0.8em;
+    color: white;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 6px white solid;
+    width: 100px;
+    text-transform: capitalize;
+  }
+  .swipe {
+    animation-timing-function: linear;
+    animation: nisha 1s infinite;
+    animation-iteration-count: infinite;
+  }
+  @keyframes nisha {
+    from {
+      left: 10px;
+    }
+    to {
+      left: 300px;
+    }
+  }
+
+  .category {
+    display: block;
+    top: 8vh;
+    right: -8vw;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    border: 0px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+  }
+  .fa {
+    padding-right: 4px;
+  }
+
+  #category_container {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+  }
+  #category_container2 {
+    display: block;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    white-space: nowrap;
+  }
+
+  .category_box-one {
+    display: block;
+    margin-left: 45vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 390px;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px red solid;
+    box-sizing: border-box;
+  }
+  .category_first {
+    background-color: #0f0e0e;
+  }
+  .category_second {
+    background-color: #4e4e4e;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    opacity: 0.6;
+  }
+
+  @keyframes nisha {
+    0% {
+      background-color: #4e4e4e;
+    }
+    50% {
+      background-color: #0f0e0e;
+    }
+    100% {
+      background-color: #414141;
+    }
+  }
+
+  #box {
+    animation-name: nisha;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    right: 0px;
+    z-index: 1;
+    width: 40vw;
+    height: auto;
+    border-bottom: 3px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.9em;
+  }
+  .category span a {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 1.5vw;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .category span a:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* kindle and nexus10 Layout: 800px to a max of 1280px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 800px) and (min-device-height: 1280px) {
+  .category_fixed-bar {
+    display: block;
+    width: 75vw;
+    height: 100vh;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+  .category_fixed-content-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 85%;
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    transform: translate(-0%, -60%);
+    border: 0px red solid;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 1.2;
+  }
+  .category_fixed-heading {
+    font-size: 3.7em;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    padding-bottom: 20px;
+  }
+  .category_fixed-content {
+    font-size: 1.3em;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 140px;
+    width: 140px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .category_fixed-subheading {
+    font-size: 1.1em;
+    color: white;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 6px white solid;
+    width: 100px;
+    text-transform: capitalize;
+  }
+  .swipe {
+    animation-timing-function: linear;
+    animation: nisha 1s infinite;
+    animation-iteration-count: infinite;
+  }
+  @keyframes nisha {
+    from {
+      left: 10px;
+    }
+    to {
+      left: 300px;
+    }
+  }
+
+  .category {
+    display: block;
+    top: 17vh;
+    right: -12vw;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    border: 0px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .fa {
+    padding-right: 4px;
+  }
+
+  #category_container {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+  }
+  #category_container2 {
+    display: block;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    white-space: nowrap;
+  }
+
+  .category_box-one {
+    display: block;
+    margin-left: 75vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 75vw;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px red solid;
+    box-sizing: border-box;
+  }
+  .category_first {
+    background-color: #0f0e0e;
+  }
+  .category_second {
+    background-color: #4e4e4e;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 80%;
+    opacity: 0.6;
+  }
+
+  @keyframes nisha {
+    0% {
+      background-color: #4e4e4e;
+    }
+    50% {
+      background-color: #0f0e0e;
+    }
+    100% {
+      background-color: #414141;
+    }
+  }
+
+  #box {
+    animation-name: nisha;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    right: 0px;
+    z-index: 1;
+    width: 60vw;
+    height: auto;
+    border-bottom: 3px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 3em;
+  }
+  .category span a {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 1.5vw;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+  .category span a:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* ipad pro Layout: 1024px to a max of 1366px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 1024px) and (min-device-height: 1366px) {
+  .category_fixed-heading {
+    font-size: 3.5em;
+    padding-bottom: 20px;
+    letter-spacing: 4px;
+  }
+  .category_fixed-content {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    line-height: 1.2;
+  }
+  .category_fixed-subheading {
+    font-size: 1.2em;
+    color: white;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 6px white solid;
+    width: 100px;
+    text-transform: capitalize;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    height: 140px;
+    width: 140px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 5vh;
+    right: 0px;
+    z-index: 1;
+    width: 60vw;
+    height: auto;
+    border-bottom: 5px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.6em;
+  }
+
+  .category {
+    display: block;
+    top: 17vh;
+    right: -10vw;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    border: 0px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+}
+
+/* L-Desktop Layout: 1280px to a max of 1440px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-width: 1280px) {
+  .category_fixed-content-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 85%;
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    transform: translate(-0%, -60%);
+    border: 0px red solid;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 1.2;
+  }
+  .category_fixed-heading {
+    font-size: 3.5em;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    padding-bottom: 20px;
+  }
+  .category_fixed-subheading {
+    font-size: 1.1em;
+    color: white;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 6px white solid;
+    width: 100px;
+    text-transform: capitalize;
+  }
+  .category_fixed-content {
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: normal;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    height: 110px;
+    width: 110px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .category {
+    display: block;
+    top: 7vh;
+    right: -8vw;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    border: 0px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 1px;
+  }
+  .fa {
+    padding-right: 6px;
+  }
+  .category_point-container {
+    display: block;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 6vh;
+    left: 60vw;
+    z-index: 1;
+    width: 40vw;
+    height: auto;
+    border-bottom: 3px white solid;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.5em;
+  }
+
+  #category_container {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+  }
+  #category_container2 {
+    display: block;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    white-space: nowrap;
+  }
+
+  .category_box-one {
+    display: block;
+    margin-left: 45vw;
+  }
+  #category_container .category_box {
+    display: block;
+    width: 40vw;
+    height: 100vh;
+    color: #000;
+    font-size: small;
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    position: relative;
+    border: 0px red solid;
+    box-sizing: border-box;
+  }
+  .category_first {
+    background-color: #0f0e0e;
+  }
+  .category_second {
+    background-color: #4e4e4e;
+  }
+  .categoryimage {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    opacity: 0.6;
+  }
+}

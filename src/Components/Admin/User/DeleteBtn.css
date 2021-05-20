@@ -1,0 +1,19 @@
+.delete_btn_main {
+    background-color: #212529;
+    border: 1px solid #ff0000;
+    padding: 1rem 2rem !important;
+    color: #ff0000;
+}
+.delete_btn_main:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+.delete_btn_no {
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+}
+.delete_btn_yes {
+    border: none;
+    color: #fff;
+}

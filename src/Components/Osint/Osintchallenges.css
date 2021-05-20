@@ -1,0 +1,1082 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+  width: 100%;
+}
+
+.dropright {
+  z-index: 2;
+  color: blue;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.box {
+  animation: slideInRight;
+  animation-duration: 1.5s;
+}
+.mobtab-category {
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+.mobtab-content {
+  animation: fadeIn;
+  animation-duration: 1.5s;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.crytography_challenges {
+  background-color: black;
+  background-image: url(../../Assets/ctf-images/bg.jpg);
+}
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+.mob-categoryimage {
+  width: 100%;
+  height: 70vh;
+  background-image: url(../../Assets/ctf-images/cryptography.jpeg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fixed-menu {
+  display: block;
+  z-index: 2;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  height: 80px;
+  width: 80px;
+  opacity: 1;
+  cursor: pointer;
+}
+.fixed-menu:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.mob-heading {
+  line-height: 1;
+  margin-top: -27vh;
+  padding-top: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  padding-right: 35px;
+  font-family: "Montserrat", sans-serif;
+  color: lightgrey;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.mob-subheading {
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-top: 3px white solid;
+  margin-left: 40px;
+  padding: 5px;
+}
+.mob-content {
+  color: white;
+  width: 100%;
+  background-color: black;
+  box-sizing: border-box;
+  margin-top: 30px;
+  padding-top: 80px;
+  padding-bottom: 130px;
+}
+.mob-content p {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+}
+
+.mob-play {
+  border-bottom: 1px white solid;
+  padding-top: 40px;
+  padding-bottom: 2px;
+}
+.mob-play a {
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: auto;
+}
+.mob-play a:hover {
+  color: white;
+  text-decoration: none;
+}
+.fa {
+  padding-right: 4px;
+}
+
+.mob-scroll {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 95%;
+  left: 93%;
+  transform: translate(-90%, -90%);
+  opacity: 0.7;
+  animation-timing-function: linear;
+  animation: nisha 2s infinite;
+}
+@keyframes nisha {
+  from {
+    top: 85vh;
+  }
+  to {
+    top: 90vh;
+  }
+}
+
+.mobtab {
+  display: none;
+}
+.back {
+  display: none;
+}
+.play {
+  display: none;
+}
+#container {
+  display: none;
+}
+#container2 {
+  display: none;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 120px;
+    width: 120px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .mob-heading {
+    line-height: 1;
+    margin-top: -23vh;
+    padding-top: 40px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding-right: 40px;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 5.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mob-subheading {
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.3em;
+    font-weight: bold;
+    border-top: 4px white solid;
+    margin-left: 60px;
+    padding: 5px;
+  }
+  .mob-content {
+    color: white;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 150px;
+  }
+  .mob-content p {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+  }
+
+  .mob-scroll {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: 95%;
+    left: 93%;
+    transform: translate(-90%, -90%);
+    opacity: 0.8;
+    animation-timing-function: linear;
+    animation: nisha 2s infinite;
+  }
+}
+
+/* surface duo Layout: 540px to a max of 720px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 540px) and (min-device-height: 720px) {
+  .mob-categoryimage {
+    width: 100%;
+    height: 69vh;
+    background-image: url(../../Assets/ctf-images/cryptography.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .mob-heading {
+    line-height: 1;
+    margin-top: -23vh;
+    padding-top: 40px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding-right: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mob-subheading {
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-top: 4px white solid;
+    margin-left: 60px;
+    padding: 5px;
+  }
+  .mob-content {
+    color: white;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding-top: 90px;
+    padding-bottom: 150px;
+  }
+  .mob-content p {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1em;
+  }
+
+  .mob-scroll {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 95%;
+    left: 93%;
+    transform: translate(-90%, -90%);
+    opacity: 0.8;
+    animation-timing-function: linear;
+    animation: nisha 2s infinite;
+  }
+}
+
+/* microsoft lumia 550 Layout: 640px to a max of 360px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 640px) and (min-device-height: 360px) {
+  .mob-categoryimage {
+    width: 100%;
+    height: 69vh;
+    background-image: url(../../Assets/ctf-images/cryptography.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .mob-heading {
+    line-height: 1;
+    margin-top: -20vh;
+    padding-top: 40px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding-right: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mob-subheading {
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-top: 4px white solid;
+    margin-left: 60px;
+    padding: 5px;
+  }
+  .mob-content {
+    color: white;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .mob-content p {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8em;
+  }
+
+  .mob-scroll {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 95%;
+    left: 93%;
+    transform: translate(-90%, -90%);
+    opacity: 0.8;
+    animation-timing-function: linear;
+    animation: nisha 2s infinite;
+  }
+
+  .slider-fluid-container {
+    width: 100vw;
+    height: 350px;
+    margin-left: 0vw;
+    position: relative;
+    background-color: #0f0e0e;
+  }
+  .slider-container {
+    display: block;
+    border: 0px white solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+}
+
+/* ipad and ipad mini Layout: 768px to a max of 1024px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) {
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 120px;
+    width: 120px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .mob-heading {
+    line-height: 1;
+    margin-top: -20vh;
+    padding-top: 40px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding-right: 60px;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mob-subheading {
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.3em;
+    font-weight: bold;
+    border-top: 4px white solid;
+    margin-left: 70px;
+    padding: 5px;
+  }
+  .mob-content {
+    color: white;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding-top: 90px;
+    padding-bottom: 150px;
+  }
+  .mob-content p {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+  }
+
+  .mob-scroll {
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    top: 95%;
+    left: 93%;
+    transform: translate(-90%, -90%);
+    opacity: 0.8;
+    animation-timing-function: linear;
+    animation: nisha 2s infinite;
+  }
+
+  .slider-fluid-container {
+    width: 100vw;
+    height: 600px;
+    margin-left: 0vw;
+    position: relative;
+    background-color: #0f0e0e;
+  }
+  .slider-container {
+    display: block;
+    border: 0px white solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+  .mob-scroll {
+    display: none;
+  }
+  .mob-categoryimage {
+    display: none;
+  }
+  .mob-heading {
+    display: none;
+  }
+  .mob-subheading {
+    display: none;
+  }
+  .mob-content {
+    display: none;
+  }
+  .mob-content p {
+    display: none;
+  }
+  .mob-play {
+    display: none;
+  }
+
+  .mobtab {
+    display: block;
+    background-color: black;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .mobtab-bar {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 20%;
+    height: 80vh;
+    border: 0px red solid;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding: 3%;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+  }
+  .mobtab-category {
+    display: none;
+    width: 50vw;
+    position: absolute;
+    right: 12px;
+    top: 25px;
+    font-size: x-small;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    text-transform: capitalize;
+  }
+  .row {
+    color: lightgray;
+    text-align: right;
+  }
+  .fa {
+    padding-left: 5px;
+  }
+  .mobtab-container {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-0%, -50%);
+    border: 0px red solid;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .mobtab-heading {
+    font-size: 6em;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    opacity: 0.6;
+  }
+  .mobtab-subheading {
+    font-size: 1.2em;
+    color: white;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 6px white solid;
+    width: 100px;
+  }
+  .mobtab-content {
+    font-size: 0.7em;
+    color: white;
+  }
+
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    height: 90px;
+    width: 90px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .back {
+    display: block;
+    position: fixed;
+    top: 5vh;
+    right: 2vw;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    border-bottom: 3px white solid;
+    padding: 3px;
+  }
+  .back a {
+    color: white;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+  .back a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .fa {
+    padding-left: 6px;
+  }
+
+  .slider-fluid-container {
+    width: 60vw;
+    height: 100vh;
+    margin-left: 40vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #0f0e0e;
+  }
+  .slider-container {
+    display: block;
+    border: 0px white solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+
+  .modal {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* kindle and nexus10 Layout: 800px to a max of 1280px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 800px) and (min-device-height: 1280px) {
+  .crytography_challenges {
+    background-color: black;
+    background-image: url(../../Assets/ctf-images/bg.jpg);
+  }
+  ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 1px;
+    height: 1px;
+  }
+
+  .mob-categoryimage {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    background-image: url(../../Assets/ctf-images/cryptography.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 130px;
+    width: 130px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .fixed-menu:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .mob-heading {
+    display: block;
+    line-height: 1;
+    margin-top: -30vh;
+    padding-top: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding-right: 35px;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 9em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mob-subheading {
+    display: block;
+    line-height: 0.3;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.9em;
+    font-weight: bold;
+    border-top: 3px white solid;
+    margin-left: 40px;
+    padding: 9px;
+    width: 30vw;
+  }
+  .mob-content {
+    display: block;
+    color: white;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding-top: 80px;
+    padding-bottom: 130px;
+  }
+  .mob-content p {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+  }
+
+  .mob-play {
+    display: block;
+    border-bottom: 1px white solid;
+    padding-top: 40px;
+    padding-bottom: 2px;
+  }
+  .mob-play a {
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: auto;
+  }
+  .mob-play a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .fa {
+    padding-right: 4px;
+  }
+
+  .mob-scroll {
+    display: block;
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 95%;
+    left: 93%;
+    transform: translate(-90%, -90%);
+    opacity: 0.7;
+    animation-timing-function: linear;
+    animation: nisha 2s infinite;
+  }
+  @keyframes nisha {
+    from {
+      top: 85vh;
+    }
+    to {
+      top: 90vh;
+    }
+  }
+
+  .slider-fluid-container {
+    width: 100vw;
+    height: 50vh;
+    margin-left: 0vw;
+    position: relative;
+    background-color: #0f0e0e;
+  }
+  .slider-container {
+    display: block;
+    border: 0px white solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+
+  .mobtab {
+    display: none;
+  }
+  .back {
+    display: none;
+  }
+  .play {
+    display: none;
+  }
+  #container {
+    display: none;
+  }
+  #container2 {
+    display: none;
+  }
+
+  .slider-fluid-container {
+    width: 100vw;
+    height: 700px;
+    margin-left: 0vw;
+    position: relative;
+    background-color: #0f0e0e;
+  }
+  .slider-container {
+    display: block;
+    border: 0px white solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+}
+
+/* ipad pro Layout: 1024px to a max of 1366px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 1024px) and (min-device-height: 1366px) {
+  .mob-categoryimage {
+    display: block;
+    width: 100%;
+    height: 70vh;
+    background-image: url(../../Assets/ctf-images/cryptography.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 150px;
+    width: 150px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .fixed-menu:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .mob-heading {
+    display: block;
+    line-height: 1;
+    margin-top: -30vh;
+    padding-top: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding-right: 90px;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    font-size: 9em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .mob-subheading {
+    display: block;
+    line-height: 0.3;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 2.9em;
+    font-weight: bold;
+    border-top: 3px white solid;
+    margin-left: 90px;
+    padding: 9px;
+    width: 30vw;
+  }
+  .mob-content {
+    display: block;
+    color: white;
+    width: 100%;
+    background-color: black;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .mob-content p {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8em;
+  }
+
+  .slider-fluid-container {
+    width: 100vw;
+    height: 780px;
+    margin-left: 0vw;
+    position: relative;
+    background-color: #0f0e0e;
+  }
+  .slider-container {
+    display: block;
+    border: 0px white solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+}
+
+/* L-Desktop Layout: 1280px to a max of 1440px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-width: 1280px) {
+  .mob-scroll {
+    display: none;
+  }
+  .mob-categoryimage {
+    display: none;
+  }
+  .mob-heading {
+    display: none;
+  }
+  .mob-subheading {
+    display: none;
+  }
+  .mob-content {
+    display: none;
+  }
+  .mob-content p {
+    display: none;
+  }
+  .mob-play {
+    display: none;
+  }
+
+  .mobtab {
+    display: block;
+    background-color: black;
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 90px;
+    width: 90px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .back a {
+    color: white;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+  }
+  .mobtab-bar {
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 20%;
+    height: 80vh;
+    border: 0px red solid;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    padding: 3%;
+    font-family: "Montserrat", sans-serif;
+    color: lightgrey;
+    letter-spacing: 2px;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+  }
+  .mobtab-container {
+    display: block;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-0%, -50%);
+    border: 0px red solid;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .mobtab-heading {
+    display: block;
+    font-size: 4em;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .mobtab-subheading {
+    display: block;
+    font-size: 1em;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 6px white solid;
+    width: 100px;
+  }
+  .mobtab-content {
+    display: block;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1;
+  }
+
+  .slider-fluid-container {
+    width: 60vw;
+    height: 100vh;
+    margin-left: 40vw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #0f0e0e;
+  }
+}

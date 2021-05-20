@@ -1,0 +1,358 @@
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 10px;
+  height: 10px;
+}
+.newchallenge_main_container {
+  background-color: black;
+  background-image: url(../../../../Assets/ctf-images/bg.jpg);
+  
+}
+.newchallenges_heading {
+  text-align: center !important;
+}
+option {
+  color: #fff;
+}
+
+.jumbotron {
+  padding: 10rem 2rem;
+  margin-bottom: 5rem;
+}
+
+.jumbotron h2 {
+  font-size: 4.5rem;
+}
+
+.pl-3 {
+  padding-left: 3rem !important;
+}
+.pr-3 {
+  font-size: 1.8rem;
+  padding-right: 3rem !important;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-5 {
+  font-size: 1.8rem;
+  padding: 2.5rem !important;
+}
+
+.form-group {
+  text-align: left;
+}
+
+
+.fixed-menu {
+  display: block;
+  z-index: 2;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  height: 80px;
+  width: 80px;
+  opacity: 1;
+  cursor: pointer;
+}
+.fixed-menu:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.fa {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.newchallenge,
+.newchallenge:before,
+.newchallenge:after {
+  box-sizing: border-box;
+}
+
+.tool-list {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+  overflow: hidden;
+}
+.tool--btn {
+  display: block;
+  border: none;
+  padding: 0.5rem;
+  font-size: 20px;
+  background-color: #212529;
+}
+#output {
+  height: 300px;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.subheading {
+  color: #fff !important;
+}
+
+.challenges_form_main {
+  background-color: red;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 120px;
+    width: 120px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 20px;
+  }
+}
+
+/* surface duo Layout: 540px to a max of 720px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 540px) and (min-device-height: 720px) {
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 20px;
+  }
+}
+
+/* microsoft lumia 550 Layout: 640px to a max of 360px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 640px) and (min-device-height: 360px) {
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 20px;
+  }
+}
+
+/* ipad and ipad mini Layout: 768px to a max of 1024px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) {
+  .fixed-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 120px;
+    width: 120px;
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+  .new_challenge {
+    margin: 0;
+    background-color: black;
+    background-image: url(../../../../Assets/ctf-images/bg.jpg);
+  }
+
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    height: 90px;
+    width: 90px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 18px;
+  }
+
+  .tool-list {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+    overflow: hidden;
+  }
+  .tool--btn {
+    display: block;
+    border: none;
+    padding: 0.5rem;
+    font-size: 20px;
+    background-color: #212529;
+  }
+  #output {
+    height: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  .subheading {
+    color: #515c66;
+  }
+}
+
+/* kindle and nexus10 Layout: 800px to a max of 1280px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 800px) and (min-device-height: 1280px) {
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 110px;
+    width: 110px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 21px;
+  }
+}
+
+/* ipad pro Layout: 1024px to a max of 1366px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-device-width: 1024px) and (min-device-height: 1366px) {
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 130px;
+    width: 130px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 22px;
+  }
+}
+
+/* L-Desktop Layout: 1280px to a max of 1440px.  Inherits styles from: Mobile Layout Tablet Layout and Desktop Layout. */
+
+@media only screen and (min-width: 1280px) {
+  .fixed-menu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 90px;
+    width: 90px;
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .fa {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .newchallenge,
+  .newchallenge:before,
+  .newchallenge:after {
+    box-sizing: border-box;
+  }
+  .newchallenge {
+    font-size: 22px;
+  }
+}

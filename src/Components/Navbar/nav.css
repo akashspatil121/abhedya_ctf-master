@@ -1,0 +1,90 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+.sidenav1 {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sub-container {
+  position: absolute;
+  background: #111;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub-container a {
+  border: 0px white solid;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  font-weight: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sidenav a {
+  border: 0px white solid;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  font-weight: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 46px;
+  margin-left: 50px;
+}
+
+.menu-button {
+  z-index: 2;
+}
+
+@media screen and (max-width: 320px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 15px;
+  }
+  .sub-container a {
+    font-size: 15px;
+  }
+}

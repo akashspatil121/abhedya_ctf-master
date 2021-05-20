@@ -1,0 +1,74 @@
+.allpages_main_container {
+    padding-bottom: 2rem;
+    background-color: black;
+  background-image: url(../../../Assets/ctf-images/bg.jpg);
+}
+
+.allpages_top {
+    padding: 10rem 0;
+    text-align: center;
+    color: #fff;
+    background-color: #212529;
+}
+
+.allpages_top span {
+    font-size: 5rem;
+    font-weight: bolder;
+}
+.allpages_top a {
+    margin-left: 1rem;
+    font-size: 5rem;
+}
+
+.allpages_table {
+    position: relative;
+    margin: 6rem 1rem 2rem 1rem;
+    background-color: #212529;
+}
+
+.allpages_btn_div {
+    position: relative;
+}
+
+.allpages_btn_delete {
+    margin-top: 0.5rem;
+    position: absolute; 
+    right: 1rem;  
+}
+
+.allpages_table .row {
+    margin: 0rem 0 !important;
+}
+.table > tbody > tr > td {
+    padding: 1.5rem 0.5rem;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {    
+    padding: 1rem 0.5rem !important;
+    font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 539px) {
+  
+}
+
+@media only screen and (min-width: 767px) {
+
+}
+@media only screen and (min-width: 1023px) {
+    .allpages_table { 
+        margin: 6rem 6rem 2rem 6rem;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {    
+        padding: 1.5rem 1.5rem !important;
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 1279px) {
+    .allpages_table { 
+        margin: 6rem 10rem 2rem 10rem;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {    
+        padding: 1.5rem 2.5rem !important;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,109 @@
+.notification {
+  background-color: black;
+  background-image: url(../../../Assets/ctf-images/bg.jpg);
+}
+
+.notification_top {
+  text-align: center;
+}
+.notification_heading {
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.notification_form {
+  padding: 1rem;
+  color: #fff;
+}
+
+.notification_form_heading {
+  font-weight: bold;
+}
+
+.notification_label {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.notification_label_radio {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.notification_form_input {
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.notification_input {
+  width: 100%;
+  margin-top: 1rem;
+  border-color: rgb(183 174 174);
+  color: #000;
+}
+
+.notification_para {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  color: rgb(152 148 148);
+}
+
+.notification_sound {
+  margin-left: 0.5rem;
+}
+
+.notification_button {
+  padding: 0.7rem 2.5rem;
+  background-color: hsl(133deg 62% 41%);
+  border: hsl(133deg 62% 41%);
+  font-weight: bold;
+  color: #fff;
+}
+.notification_label_radio label {
+  margin: 0 2rem 0 1rem;
+}
+
+.notification_form_input {
+  width: 2rem;
+  height: 2rem;
+}
+
+.notification_form_alert {
+  margin-right: 1rem;
+}
+#vehicle1 {
+  margin-top: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.notification_footer {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: rgb(152 148 148);
+}
+
+
+@media only screen and (min-width: 539px) {
+  .notification_form {
+    padding: 1rem 4rem;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .notification_form {
+    padding: 2rem 6rem;
+  }
+
+  .notification_div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 45% 40% 15%;
+  }
+
+  .notification_button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

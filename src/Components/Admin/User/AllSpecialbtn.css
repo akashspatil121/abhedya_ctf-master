@@ -1,0 +1,72 @@
+.edituser_form input {
+    width: 100%;
+    height: 3.5rem;
+    margin: 1rem 0;
+}
+.edituser_checkbox {
+    margin: 0 1rem 0 1.5rem !important;
+}
+
+.userstatistics_modal_head {
+    text-align: center;
+}
+.edituser_form textarea {
+    width: 100%;
+    height: 10rem;
+}
+.awarduser_form_radio_container {
+    display: grid;
+    grid-template-columns: 36.33% 36.33% 29.99%;
+    width: 100% !important;
+    margin-top: 1rem;
+    border-top: 1px solid #000;
+   padding-top: 1rem;
+}
+.awarduser_form_radio {
+    width: 10% !important;
+    height: 1.4rem !important;
+    margin: 0 !important;
+}
+
+.awarduser_form_radio_container label {
+    margin-right: 7rem;
+    margin-left: 0rem !important;
+}
+
+.awarduser_form_radio_container label i {
+font-size: 1.4rem;
+    
+}
+.emailuser_textarea {
+    width: 100%;
+    height: 20rem;
+}
+
+.address_user_table {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    text-align: center;
+}
+
+.address_user_row {
+    border-top: 1px solid #000;
+    padding: 1rem 0;
+}
+.scorbored_table_data td {
+    text-align: center !important;
+}
+.hide_btn_lable {
+    margin-right: 1rem;
+}
+.hide_btn_select {
+    width: 30%;
+    height: 2.9rem;
+}
+.hide_btn_select option {
+    background-color: #000;
+}
+.hide_btn_main {
+    background-color: #212529;
+    border-color: black;
+    padding: 1rem 2rem;
+}

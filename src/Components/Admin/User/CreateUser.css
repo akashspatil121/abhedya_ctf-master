@@ -1,0 +1,116 @@
+.createuser_main_container {
+    padding-bottom: 2rem;
+    background-color: black;
+  background-image: url(../../../Assets/ctf-images/bg.jpg);
+}
+
+.createuser_top {
+    text-align: center;
+    padding: 6rem;
+    color: #fff;
+    background-color: #212529;
+}
+
+.createuser_top h1 {
+    font-size: 4.2rem;
+}
+
+.createuser_form {
+    position: relative;
+    margin: 6rem 1rem 2rem 1rem;
+    padding: 2rem 1rem;
+    color: #fff;
+    background-color: #212529;
+}
+
+.createuser_form input {
+    width: 100%;
+    height: 3.5rem;
+    margin: 1rem 0;
+    color: #000;
+}
+.createuser_form label {
+    font-weight: bold;
+    font-size: 1.6rem !important;
+}
+.createuser_form span {
+    position: absolute;
+    right: 1rem;
+}
+
+.createuser_form button {
+    margin-top: 1rem;
+   margin-right: auto;
+    padding: 1rem 3rem;
+    color: #fff;
+    font-size: 1.8rem;
+    border: none;
+    background-color: #007bff;
+}
+
+#createuser {
+    width: 30%;
+    height: 3.5rem;
+    color: #000;
+    font-size: 1.7rem;
+}
+#createuser option {
+    background-color: #000;
+}
+.createuser_checkbox {
+    margin: 1rem 1rem!important;
+}
+.createuser_checkbox_heading {
+    margin-right: 1.4rem;
+}
+
+@media only screen and (min-width: 539px) {
+    .createuser_form {
+        position: relative;
+        margin: 6rem 2rem 2rem 2rem;
+        padding: 2rem 2rem;
+    }
+    .createuser_form span {
+        right: 2rem;
+    }
+    .createuser_checkbox_heading {
+        margin-right: 1rem;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .createuser_form {
+        position: relative;
+        margin: 6rem 6rem 2rem 6rem;
+        padding: 2rem 3rem 8rem 3rem;
+    }
+    .createuser_form span {
+        right: 3rem;
+    }
+    .createuser_checkbox_heading {
+        margin-right: 1.5rem;
+    }
+    .createuser_form button { 
+        position: absolute;
+        right: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1023px) {
+    .createuser_form {
+        position: relative;
+        margin: 6rem 12rem 2rem 12rem;
+        padding: 4rem 5rem 8rem 5rem;
+    }
+    .createuser_form span {
+        right: 5rem;
+    }
+    .createuser_checkbox_heading {
+        margin-right: 1.5rem;
+    }
+    .createuser_form button { 
+        right: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1279px) {}

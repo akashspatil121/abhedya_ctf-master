@@ -1,0 +1,89 @@
+import React from 'react'
+import Navbar from '../Navbar/Navbar'
+import './Misc.css'
+import scroll from "../../Assets/ctf-images/scroll.svg";
+import misc from "../../Assets/ctf-images/misc.jpg";
+
+function Misc() {
+    return (
+        <div className="cryptography">
+        <Navbar />
+        <div class="cryptography_mob-categoryimage"></div>
+        <span class="cryptography_mob-heading">
+        Misc
+        </span>
+        <br />
+        <span class="cryptography_mob-subheading">ABHEDYA</span>
+        <br />
+        <span class="cryptography_mob-subheading" style={{ border: "none", color: "grey" }}>
+          CTF
+        </span>
+        <div class="cryptography_mob-content">
+          <p style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+          About Misc.
+          </p>
+          <p>
+          Misc is a Miscellaneous challenge.
+          </p>
+  
+          <p class="cryptography_mob-play">
+            <a href="/category/misc/miscchallenges">
+              <i class="fa">&#xf04b;</i>play challenges
+            </a>
+          </p>
+        </div>
+        <img src={scroll} class="cryptography_mob-scroll" alt="scrolldown" />
+  
+        <div class="cryptography_mobtab">
+          <div class="cryptography_mobtab-bar">Abhedya</div>
+          <div class="cryptography_mobtab-category">
+            <div class="row">
+              <div class="col-12">
+                Back<i class="fa">&#xf060;</i>
+              </div>
+            </div>
+          </div>
+          <div class="cryptography_mobtab-container">
+            <div class="cryptography_mobtab-content">
+              <p class="cryptography_mobtab-heading">
+              Misc
+              </p>
+              <p class="cryptography_mobtab-subheading">
+                <b>ABHEDYA</b>
+                <br />
+                CTF
+              </p>
+              <p>
+              Misc is a Miscellaneous challenge.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <a href="/category">
+            back
+            <i class="fa">&#xf04a;</i>
+          </a>
+        </div>
+  
+        <div id="cryptography_container">
+          <div id="cryptography_container2">
+            <div class="cryptography_box cryptography_box-one cryptography_third" style={{ width: "3vw" }}></div>
+            <div class="cryptography_box cryptography_first" style={{ borderLeft: "1px #4e4e4e solid" }}>
+              <img src={misc} class="categoryimage" alt="cryptography" />
+            </div>
+          </div>
+        </div>
+  
+        <div class="play">
+          <a href="/category/misc/miscchallenges">
+            play challenges
+            <i class="fa">&#xf04b;</i>
+          </a>
+        </div>
+      </div>
+   
+    )
+}
+
+export default Misc

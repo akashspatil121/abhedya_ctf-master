@@ -1,0 +1,137 @@
+.user_information_main_container {
+    background-color: black;
+  background-image: url(../../../Assets/ctf-images/bg.jpg);
+   
+}
+
+.UserInformation_top {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #212529;
+    color: #fff;
+}
+
+.UserInformation_email {
+  border-bottom: 1px solid #fff;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.UserInformation_font {
+   margin: 2rem;
+}
+.UserInformation_font a i {
+    padding: 0 1rem;
+    font-size: 3rem;
+    color: #fff;
+   
+    
+}
+
+.userinformation_details {
+    position: relative;
+    margin: 6rem 1rem 2rem 1rem;
+    background-color: #212529;
+    color: #fff;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem 1rem !important;
+    background-color: #337ab7;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.userinformation_details_table_container {
+    position:relative
+}
+.userinformation_details_table_container h1 {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.userinformation_details_table_container span {
+    position: absolute;
+    right: 5px;
+    top: 4rem;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.UserInformation_bottom {
+    position: relative;
+    margin: 1rem;
+    padding-bottom: 6rem;
+}
+
+.UserInformation_bottom textarea {
+    width: 100%;
+}
+
+.UserInformation_bottom button {
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #008000;
+}
+
+@media only screen and (min-width: 539px) {
+    .userinformation_details {
+        margin: 6rem 2rem 2rem 2rem;
+    }
+    .UserInformation_bottom {
+        margin: 1rem 2rem;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .UserInformation_top {
+        padding: 2rem 15rem;
+    }
+    .userinformation_details {
+        margin: 6rem 4rem 2rem 4rem;
+    }
+    .UserInformation_bottom {
+        margin: 1rem 4rem;
+    }
+    .UserInformation_bottom textarea {
+        padding: .4rem 1rem;
+        font-size: 1.5rem;
+        height: 7rem;
+    }
+    .UserInformation_bottom button {
+        top: 8rem;
+    }
+}
+
+@media only screen and (min-width: 1023px) {
+    .UserInformation_top {
+        padding: 2rem 24rem;
+    }
+    .userinformation_details {
+        margin: 6rem 8rem 2rem 8rem;
+    }
+    .UserInformation_bottom {
+        margin: 1rem 8rem;
+    }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        padding: 2rem 5rem !important;
+    }
+}
+
+@media only screen and (min-width: 1279px) {
+    .UserInformation_top {
+        padding: 2rem 40rem;
+    }
+}

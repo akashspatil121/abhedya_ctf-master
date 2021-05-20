@@ -1,0 +1,17 @@
+.CategoryBdImg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  opacity: 0.5;
+  text-align: center;
+}
+.CategoryBdImg p {
+  background-color: #313335;
+  padding-top: 11vw;
+  padding-bottom: 11vw;
+  font-weight: 400;
+  font-size: 3vw;
+}

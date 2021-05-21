@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Tabs, Tab, Modal, Button, Form,  } from "react-bootstrap";
 import "./NewPages.css"
 import AllPages from "./AllPages"
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
+import Navbar from "../../Navbar/Navbar";
  
 const NewPages = (props) => {
     const [show, setShow] = useState(false);
@@ -12,6 +14,8 @@ const NewPages = (props) => {
     return (
         <>
         <section>
+        <AdminNavbar/>
+        <Navbar/>
         <div className="newpage_form">
           <form>
             <label className="newpage_label">

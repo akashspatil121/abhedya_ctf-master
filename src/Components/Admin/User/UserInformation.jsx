@@ -12,12 +12,14 @@ import AwardUsers from "./AwardUsers";
 import EmailUsers from "./EmailUsers";
 import DeleteUsers from "./DeleteUsers";
 import AddressUsers from "./AddressUsers";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 function UserInformation() {
   return (
     <>
       <section className="user_information_main_container">
         <Navbar />
+        <AdminNavbar/>
         <div className="UserInformation_top">
           <h1>alphaadmin</h1>
           <h1 className="UserInformation_email">admin@abhedya.in</h1>

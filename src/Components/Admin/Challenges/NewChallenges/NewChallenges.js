@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "../../../Navbar/Navbar";
+import AdminNavbar from "../../AdminNavbar/AdminNavbar";
 import "./NewChallenges.css";
 
 
 function NewChallenges() {
   return (
     <div className="newchallenge_main_container">
+    <AdminNavbar/>
       <Navbar />
       <div class="jumbotron" style={{ backgroundColor: "#212529" }}>
         <div className="container pt-5 mt-5 mt-md-0 pt-md-0">

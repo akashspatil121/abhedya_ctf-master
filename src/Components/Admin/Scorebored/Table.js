@@ -4,6 +4,7 @@ import { Container, Row, Col, Nav, Tab, Tabs } from "react-bootstrap";
 import HideBtn from "./HideBtn";
 import "./Table.css"
 import Navbar from "../../Navbar/Navbar";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 function TableData(id, Place, User, Score, Visibility) {
   return { id, Place, User, Score, Visibility };
@@ -20,16 +21,17 @@ const rows = [
 export default function Table() {
   return (
     <div className= "scorebored_main_container" >
+    <AdminNavbar/>
     <Navbar />
       <div
         style={{
           backgroundColor: "#212529",
           textAlign: "center",
           padding: "10rem 2rem",
-          color: "#fff"
+          color: "#fff",
         }}
       >
-        <h1>Scoreboard</h1>
+        <h1   style={{fontWeight: "bolder", fontSize:"5rem" }} >Scoreboard</h1>
       </div>
         
       <div className="allpages_table" style={{padding: "0rem 1rem"}} >

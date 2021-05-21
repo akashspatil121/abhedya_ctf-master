@@ -3,10 +3,12 @@ import Navbar from "../../Navbar/Navbar";
 import NewEditBtn from "./NewEditBtn";
 import NewDeleteBtn from "./NewDeleteBtn";
 import './Challenges.css'
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 function Challenges() {
     return (
         <div className="Challenges">
+        <AdminNavbar/>
             <Navbar />
 
             <div class="jumbotron" style={{ backgroundColor: "#212529" }}>
@@ -756,18 +758,10 @@ function Challenges() {
                 </div>
             </div>
 
-            <footer class="footer pt-4 pb-5 mb-4">
-                <div class="container text-center">
-                    <a href="https://ctfd.io" class="text-secondary">
-                        <small class="text-muted">Powered by Abhedya CTF</small>
-                    </a>
-                    <span>
-                        <small class="text-muted">
-                            <br />
-                        </small>
-                    </span>
-                </div>
-            </footer>
+            <footer className="notification_footer">
+          <span>Powered by CTFd</span>
+          <p>Version3.3.0</p>
+        </footer>
         </div>
     );
 }

@@ -33,13 +33,14 @@ import AllPages from "./Components/Admin/Pages/AllPages";
 import NewPages from "./Components/Admin/Pages/NewPages";
 import CreateUser from "./Components/Admin/User/CreateUser";
 import ChallengesUserClick from "./Components/Admin/Challenges/ChallengesUserClick";
+import AdminNavbar from "./Components/Admin/AdminNavbar/AdminNavbar";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/" component={Home} />
           <Route exact path="/navbar" component={Navbar} />
           <Route exact path="/category" component={Category} />
           <Route exact path="/category/cryptography" component={Cryptography} />
@@ -55,7 +56,8 @@ function App() {
           <Route exact path="/category/misc" component={Misc} />
           <Route exact path="/category/misc/miscchallenges" component={Miscchallenges} />
           <Route exact path="/category/osint" component={Osint} />
-          <Route exact path="/category/osint/osintchallenges" component={Osintchallenges} />
+          <Route exact path="/category/osint/osintchallenges" component={Osintchallenges} /> */}
+          <Route exact path="/admin/navabaradmin" component={AdminNavbar} />
           <Route exact path="/admin/challenges" component={Challenges} />
           <Route exact path="/admin/challenges/new" component={NewChallenges} />
           <Route exact path="/admin/newcategory" component={NewCategory} />

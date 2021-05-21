@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../Navbar/Navbar";
 import "./AllPages.css"
 import PagesDeleteBtn from "./PagesDeleteBtn"
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 
 function PagesData(id, title, route, authentication, hidden, published) {
@@ -20,6 +21,7 @@ const AllPages = () => {
     return (
         <>
             <section className="allpages_main_container">
+            <AdminNavbar/>
             <Navbar />
                 <div className="allpages_top">
                     <span>Pages</span>

@@ -1,10 +1,14 @@
 import React from "react";
 import "./CreateUser.css"
+import Navbar from "../../Navbar/Navbar";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const CreateUser = () => {
     return(
         <>
             <section className="createuser_main_container">
+            <AdminNavbar/>
+            <Navbar/>
                 <div className="createuser_top" >
                     <h1>Create User</h1>
                 </div>

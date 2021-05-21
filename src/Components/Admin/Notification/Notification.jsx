@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../../Navbar/Navbar";
 import "./Notification.css";
-import {useState} from "react";
+import {useState} from "react";   
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 
 const Notification = () => {
@@ -31,7 +32,9 @@ const Notification = () => {
 
   return (
     <div className="notification">
+   
       <section>
+       <AdminNavbar/>
         <Navbar />
         <div className="jumbotron" style={{ backgroundColor: "#212529" }}>
           <div className="container pt-5 pt-md-0">

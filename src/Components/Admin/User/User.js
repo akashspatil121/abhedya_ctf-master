@@ -3,6 +3,7 @@ import Navbar from "../../Navbar/Navbar";
 import "./User.css";
 import EditBtn from "./EditBtn";
 import DeleteBtn from "./DeleteBtn";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 function UserData(id, user, email, country, admin, verified, hidden, banned) {
   return {id, user, email, country, admin, verified, hidden, banned };
@@ -19,6 +20,7 @@ const UserAll = [
 function User() {
   return (
     <div className="user_main_container">
+    <AdminNavbar/>
       <Navbar />
       <div className="User">
         <main role="main">

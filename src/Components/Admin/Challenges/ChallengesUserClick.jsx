@@ -4,11 +4,15 @@ import { Tabs, Sonnet, Tab, TabPanel, Form } from "react-bootstrap";
 import UserFileBtn from "./UserFileBtn";
 import UserMenuBtn from "./UserMenuBtn";
 import UserDeleteBtn from "./UserDeleteBtn";
+import Navbar from "../../Navbar/Navbar";
+import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 const ChallengesUserClick = () => {
     return(
         <>
         <section className="challenges_user_click_main">
+        <AdminNavbar/>
+        <Navbar/>
             <div className="challenges_user_click_top">
                 <h1>Welcome</h1>
                 <h3>Warmup</h3>

@@ -30,6 +30,9 @@ function Navbar() {
           <div class="row pl-5 border-bottom">
             <a href="/">Home</a>
           </div>
+          <div class="row pl-5 border-bottom">
+            <a href="/admin/notification">Admin Panel</a>
+          </div>
           <div class="row py-5">
             <div class="col-5 col-md-4">
               <a href="#" class="fa">

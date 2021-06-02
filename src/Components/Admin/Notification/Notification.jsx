@@ -6,28 +6,20 @@ import AdminNavbar from "../AdminNavbar/AdminNavbar";
 
 
 const Notification = () => {
-   const [topic, setName] = useState()
-  const inputTitle = (title) => {
-    setName(title.target.value)
+ 
+  const [inputList, setInputList] = useState();
+  const [item, setItem] = useState([]);
+  
+
+  const itemEvent = (event) => {
+    setInputList(event.target.value)
   }
 
-  const [content, setContent]= useState()
-  const inputPara = (para) => {
-    setContent(para.target.value)
-  }
-  let date= new Date().toDateString();
-  let time= new Date().toLocaleTimeString();
-  const [ctime, setCtime]= useState()
-  const borderColor = "1px solid #fff"
-  const [border, setBorder] = useState()
-  const [mainContent, setMain] = useState()
-  const [mainTitle, setTitle] = useState()
-  const onSubmit = () => {
-    setTitle(topic)
-    setMain(content)
-    setBorder(borderColor)
-    setCtime(date + time)
-    alert(topic + content + 'ah') 
+  const listOfItem = () => {
+    setItem((oldItem) => {
+      return [...oldItem, inputList]
+    })
+    setInputList("")
   }
 
   return (
@@ -46,14 +38,14 @@ const Notification = () => {
           
             <label className="notification_label">
               <span className="notification_form_heading">Title</span>
-              <input className="notification_input" type="text" onChange={inputTitle} value={topic} />
+              <input className="notification_input" type="text" name="topic" value={inputList} onChange={itemEvent}  />
               <p className="notification_para">Notification title</p>
             </label>
             <br />
             <label className="notification_label">
               <span className="notification_form_heading">Content</span>
               <br />
-              <textarea className="notification_input" type="text" onChange={inputPara} />
+              <textarea className="notification_input" type="text" name="info" />
             </label>
             <p className="notification_para">
               Notification contents, Can consist of HTML and/or Markdown.
@@ -122,13 +114,18 @@ const Notification = () => {
               </div>
               <div> 
               <audio id="dog"  src="https://www.freesound.org/data/previews/91/91926_7037-lq.mp3" ></audio>
-                <a className="notification_button" href="javascript:playSound('dog')" onClick={onSubmit} >Submit</a>
+                <a className="notification_button" href="javascript:playSound('dog')" onClick={listOfItem} >Submit</a>
               </div>
             </div>
-          <div style={{border: border}}>
-          <h1>{mainTitle}</h1>
-          <p>{mainContent}</p>
-          <h4>{ctime}</h4>         
+          <div>
+
+          {item.map((itemval) => {
+            return <h1>{itemval}</h1>
+          })}
+          
+          
+        
+          {/* <h4>{ctime}</h4>          */}
         </div>
        </div>
         <footer className="notification_footer">

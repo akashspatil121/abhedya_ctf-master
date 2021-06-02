@@ -23,10 +23,7 @@ import Osintchallenges from "./Components/Osint/Osintchallenges";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/SignUp/SignUp";
 import Reset from "./Components/Reset/Reset";
-import NewCategory from "./Components/Admin/NewCategory/NewCategory";
-import Statistics from "./Components/Admin/Statistics/Statistics";
 import Notification from "./Components/Admin/Notification/Notification";
-import Ranktable from "./Components/Admin/Rank/Ranktable";
 import Scorebored from "./Components/Admin/Scorebored/Table";
 import UserInformation from "./Components/Admin/User/UserInformation";
 import AllPages from "./Components/Admin/Pages/AllPages";
@@ -40,7 +37,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          {/* <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/navbar" component={Navbar} />
           <Route exact path="/category" component={Category} />
           <Route exact path="/category/cryptography" component={Cryptography} />
@@ -56,24 +53,21 @@ function App() {
           <Route exact path="/category/misc" component={Misc} />
           <Route exact path="/category/misc/miscchallenges" component={Miscchallenges} />
           <Route exact path="/category/osint" component={Osint} />
-          <Route exact path="/category/osint/osintchallenges" component={Osintchallenges} /> */}
+          <Route exact path="/category/osint/osintchallenges" component={Osintchallenges} />
           <Route exact path="/admin/navabaradmin" component={AdminNavbar} />
           <Route exact path="/admin/challenges" component={Challenges} />
           <Route exact path="/admin/challenges/new" component={NewChallenges} />
-          <Route exact path="/admin/newcategory" component={NewCategory} />
           <Route exact path="/admin/user" component={User} />
-          <Route exact path="/admin/statistics" component={Statistics} />
           <Route exact path="/admin/notification" component={Notification} />
-          <Route exact path="/admin/rank" component={Ranktable} />
           <Route exact path="/admin/scorebored" component={Scorebored} />
           <Route exact path="/admin/userinformation" component={UserInformation} />
           <Route exact path="/admin/page" component={AllPages} />
           <Route exact path="/admin/newpage" component={NewPages} />
           <Route exact path="/admin/createuser" component={CreateUser} />
           <Route exact path="/admin/challenges/user" component={ChallengesUserClick} />          
-          {/* <Route exact path="/login" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/reset" component={Reset} /> */}
+          <Route exact path="/reset" component={Reset} />
         </Switch>
       </Router>
     </div>
